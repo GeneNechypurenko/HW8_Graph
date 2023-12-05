@@ -1,0 +1,80 @@
+﻿<Window x:Class="HW8_Graph.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW8_Graph"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Canvas Name ="canvas" Background="LightGray" Width="500" Height="300" MouseLeftButtonDown="canvas_MouseLeftButtonDown">
+
+            <Path Fill="LightBlue" Stroke="Black" StrokeThickness="2">
+                <Path.Data>
+                    <RectangleGeometry x:Name="kitchenRect" Rect = "35, 10, 200, 120"></RectangleGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Fill="LightGreen" Stroke="Black" StrokeThickness="2">
+                <Path.Data>
+                    <RectangleGeometry x:Name="coridorRect" Rect = "235, 40, 230, 120"></RectangleGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Fill="Aquamarine" Stroke="Black" StrokeThickness="2">
+                <Path.Data>
+                    <RectangleGeometry x:Name ="bedroomRect" Rect = "235, 160, 230, 130"></RectangleGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Fill="Firebrick" Stroke="Black" StrokeThickness="2">
+                <Path.Data>
+                    <RectangleGeometry x:Name="hallRect" Rect = "35, 130, 200, 160"></RectangleGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Stroke="LightGreen" StrokeThickness="2">
+                <Path.Data>
+                    <LineGeometry StartPoint="235,110" EndPoint="235, 60"></LineGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Stroke="LightGreen" StrokeThickness="2">
+                <Path.Data>
+                    <LineGeometry StartPoint="465,140" EndPoint="465, 90"></LineGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Stroke="LightGreen" StrokeThickness="2">
+                <Path.Data>
+                    <LineGeometry StartPoint="330,160" EndPoint="380, 160"></LineGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Stroke="Firebrick" StrokeThickness="2">
+                <Path.Data>
+                    <LineGeometry StartPoint="235,200" EndPoint="235, 250"></LineGeometry>
+                </Path.Data>
+            </Path>
+
+            <TextBlock FontWeight="Bold" Height="20" Width="100" Canvas.Left="90" Canvas.Top="60">Кухня
+            <Run FontWeight="Normal">18 м2</Run>
+            </TextBlock>
+
+            <TextBlock FontWeight="Bold" Height="20" Width="100" Canvas.Left="307" Canvas.Top="97">Коридор
+            <Run FontWeight="Normal">20 м2</Run>
+            </TextBlock>
+
+            <TextBlock FontWeight="Bold" Height="20" Width="100" Canvas.Left="307" Canvas.Top="215">Спальня
+            <Run FontWeight="Normal">23 м2</Run>
+            </TextBlock>
+
+            <TextBlock FontWeight="Bold" Height="20" Width="100" Canvas.Left="90" Canvas.Top="205">Зал
+            <Run FontWeight="Normal">34 м2</Run>
+            </TextBlock>
+            
+        </Canvas>
+
+    </Grid>
+</Window>
